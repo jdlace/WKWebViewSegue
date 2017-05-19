@@ -1,25 +1,228 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F71b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="8Ko-zy-uhI">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Air Pressures-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Trimester_1_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Pressure" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="30" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="l1z-5G-pgu">
+                                <rect key="frame" x="16" y="181" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="bhS-1w-ZHx"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QDp-eu-3jt">
+                                <rect key="frame" x="140" y="238" width="94" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="95" id="lxL-io-f06">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="94"/>
+                                    </constraint>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="mb to psi">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="lxL-io-f06"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="lxL-io-f06"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="mbToPSI:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fi6-6M-Jnl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="257" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XkY-cd-LBo">
+                                <rect key="frame" x="16" y="239" width="83" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="psi to mb">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="psiToMb:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tfa-nM-277"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z9O-G4-4U6">
+                                <rect key="frame" x="268" y="305" width="91" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="mb to &quot;Hg">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="mbToHG:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3iY-na-96j"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hR8-Wl-myM">
+                                <rect key="frame" x="142.5" y="305" width="89" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="&quot;Hg to psi">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="hgToPSI:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7cV-6e-N45"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="llg-hp-uht">
+                                <rect key="frame" x="16" y="305" width="89" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="psi to &quot;Hg">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="psiToHG:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aFm-ha-ogn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="US0-1Z-no3">
+                                <rect key="frame" x="268" y="238" width="91" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="&quot;Hg to mb">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="hgtoMB:" destination="BYZ-38-t0r" eventType="touchUpInside" id="12k-kb-OQT"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qtp-pK-xNc">
+                                <rect key="frame" x="16" y="96" width="343" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Czs-sU-bFV">
+                                <rect key="frame" x="79" y="373" width="216" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Le5-Xe-uFq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Current Weather">
+                                    <color key="titleColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="tcQ-91-uxv" kind="show" id="AjI-Xl-noj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="XkY-cd-LBo" firstAttribute="leading" secondItem="l1z-5G-pgu" secondAttribute="leading" id="2Qu-MC-Ydy"/>
+                            <constraint firstItem="QDp-eu-3jt" firstAttribute="centerX" secondItem="l1z-5G-pgu" secondAttribute="centerX" id="4R9-3u-PQ6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Qtp-pK-xNc" secondAttribute="trailing" id="55Q-bF-t5l"/>
+                            <constraint firstItem="Qtp-pK-xNc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="32" id="5cp-kz-8KA"/>
+                            <constraint firstItem="QDp-eu-3jt" firstAttribute="centerX" secondItem="Czs-sU-bFV" secondAttribute="centerX" id="H5p-HC-1gC"/>
+                            <constraint firstItem="QDp-eu-3jt" firstAttribute="centerX" secondItem="Qtp-pK-xNc" secondAttribute="centerX" id="JcD-OP-cDi"/>
+                            <constraint firstItem="QDp-eu-3jt" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="238" id="MSj-NZ-g5w"/>
+                            <constraint firstItem="Czs-sU-bFV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="63" id="NDo-Kn-g7X"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Qtp-pK-xNc" secondAttribute="leading" id="NYR-Ca-51g"/>
+                            <constraint firstItem="QDp-eu-3jt" firstAttribute="leading" secondItem="XkY-cd-LBo" secondAttribute="trailing" constant="41" id="Npt-sH-o6h"/>
+                            <constraint firstItem="XkY-cd-LBo" firstAttribute="top" secondItem="l1z-5G-pgu" secondAttribute="bottom" constant="28" id="Sqw-Hi-c4F"/>
+                            <constraint firstItem="Czs-sU-bFV" firstAttribute="top" secondItem="llg-hp-uht" secondAttribute="bottom" constant="32" id="bZA-vh-WhU"/>
+                            <constraint firstItem="QDp-eu-3jt" firstAttribute="centerX" secondItem="hR8-Wl-myM" secondAttribute="centerX" id="eFp-eh-zPI"/>
+                            <constraint firstItem="QDp-eu-3jt" firstAttribute="baseline" secondItem="US0-1Z-no3" secondAttribute="baseline" id="eUH-h9-j80"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Czs-sU-bFV" secondAttribute="bottom" constant="264" id="hcs-dB-vhc"/>
+                            <constraint firstItem="QDp-eu-3jt" firstAttribute="top" secondItem="l1z-5G-pgu" secondAttribute="bottom" constant="27" id="iBF-As-azS"/>
+                            <constraint firstItem="XkY-cd-LBo" firstAttribute="leading" secondItem="llg-hp-uht" secondAttribute="leading" id="m4P-6Y-Vfe"/>
+                            <constraint firstItem="US0-1Z-no3" firstAttribute="leading" secondItem="QDp-eu-3jt" secondAttribute="trailing" constant="34" id="pK5-tD-28w"/>
+                            <constraint firstItem="hR8-Wl-myM" firstAttribute="top" secondItem="QDp-eu-3jt" secondAttribute="bottom" constant="31" id="uPo-Ce-ubW"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Z9O-G4-4U6"/>
+                                <exclude reference="hR8-Wl-myM"/>
+                                <exclude reference="llg-hp-uht"/>
+                                <exclude reference="US0-1Z-no3"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Z9O-G4-4U6"/>
+                                <include reference="hR8-Wl-myM"/>
+                                <include reference="llg-hp-uht"/>
+                                <include reference="US0-1Z-no3"/>
+                            </mask>
+                        </variation>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="XKg-wZ-dOm" appends="YES" id="Hzu-tk-QLM"/>
+                        </connections>
                     </view>
+                    <navigationItem key="navigationItem" title="Air Pressures" id="oy4-lM-Ogw">
+                        <barButtonItem key="leftBarButtonItem" title="About" id="pY7-69-UZp"/>
+                        <barButtonItem key="rightBarButtonItem" title="Tweet" id="11u-KY-Rkx"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tempLabel" destination="Qtp-pK-xNc" id="ofx-XE-8qU"/>
+                        <outlet property="textField" destination="l1z-5G-pgu" id="2Mg-4i-qs7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="XKg-wZ-dOm">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="BYZ-38-t0r" id="bAA-P4-Hjl"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="967.20000000000005" y="49.925037481259373"/>
+        </scene>
+        <!--Weather View Controller-->
+        <scene sceneID="ZkZ-Mh-RYX">
+            <objects>
+                <viewController id="tcQ-91-uxv" customClass="WeatherViewController" customModule="Trimester_1_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RKP-6f-FNQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="fHL-zr-bBj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vLz-I5-nS1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ovz-Md-EwS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1726" y="50"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jlI-YV-TNp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8Ko-zy-uhI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7eP-f0-PXg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="w9x-m0-3tt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s9P-pX-pgh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="153" y="50"/>
         </scene>
     </scenes>
 </document>

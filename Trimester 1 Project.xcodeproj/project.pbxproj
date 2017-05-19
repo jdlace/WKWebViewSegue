@@ -14,6 +14,8 @@
 		FA1DA0A31BFCF6F700C72251 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA1DA0A11BFCF6F700C72251 /* LaunchScreen.storyboard */; };
 		FA1DA0AE1BFCF6F700C72251 /* Trimester_1_ProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1DA0AD1BFCF6F700C72251 /* Trimester_1_ProjectTests.swift */; };
 		FA1DA0B91BFCF6F700C72251 /* Trimester_1_ProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1DA0B81BFCF6F700C72251 /* Trimester_1_ProjectUITests.swift */; };
+		FAB7E3B51ECC94FB004B6C12 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB7E3B41ECC94FB004B6C12 /* WeatherViewController.swift */; };
+		FAB7E3B81ECCB31F004B6C12 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAB7E3B71ECCB31F004B6C12 /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		FA1DA0B41BFCF6F700C72251 /* Trimester 1 ProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Trimester 1 ProjectUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA1DA0B81BFCF6F700C72251 /* Trimester_1_ProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trimester_1_ProjectUITests.swift; sourceTree = "<group>"; };
 		FA1DA0BA1BFCF6F700C72251 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAB7E3B41ECC94FB004B6C12 /* WeatherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
+		FAB7E3B71ECCB31F004B6C12 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAB7E3B81ECCB31F004B6C12 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +86,7 @@
 				FA1DA0AC1BFCF6F700C72251 /* Trimester 1 ProjectTests */,
 				FA1DA0B71BFCF6F700C72251 /* Trimester 1 ProjectUITests */,
 				FA1DA0961BFCF6F700C72251 /* Products */,
+				FAB7E3B61ECCB31F004B6C12 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,6 +106,7 @@
 				FA1DA0981BFCF6F700C72251 /* AppDelegate.swift */,
 				FA1DA09A1BFCF6F700C72251 /* ViewController.swift */,
 				FA1DA09C1BFCF6F700C72251 /* Main.storyboard */,
+				FAB7E3B41ECC94FB004B6C12 /* WeatherViewController.swift */,
 				FA1DA09F1BFCF6F700C72251 /* Assets.xcassets */,
 				FA1DA0A11BFCF6F700C72251 /* LaunchScreen.storyboard */,
 				FA1DA0A41BFCF6F700C72251 /* Info.plist */,
@@ -123,6 +130,14 @@
 				FA1DA0BA1BFCF6F700C72251 /* Info.plist */,
 			);
 			path = "Trimester 1 ProjectUITests";
+			sourceTree = "<group>";
+		};
+		FAB7E3B61ECCB31F004B6C12 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FAB7E3B71ECCB31F004B6C12 /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,18 +203,22 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0710;
-				LastUpgradeCheck = 0710;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = SHP;
 				TargetAttributes = {
 					FA1DA0941BFCF6F700C72251 = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = M9E78PZP5E;
+						LastSwiftMigration = 0800;
 					};
 					FA1DA0A81BFCF6F700C72251 = {
 						CreatedOnToolsVersion = 7.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = FA1DA0941BFCF6F700C72251;
 					};
 					FA1DA0B31BFCF6F700C72251 = {
 						CreatedOnToolsVersion = 7.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = FA1DA0941BFCF6F700C72251;
 					};
 				};
@@ -257,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA1DA09B1BFCF6F700C72251 /* ViewController.swift in Sources */,
+				FAB7E3B51ECC94FB004B6C12 /* WeatherViewController.swift in Sources */,
 				FA1DA0991BFCF6F700C72251 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -325,8 +345,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -369,8 +391,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -389,6 +413,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -397,10 +422,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = M9E78PZP5E;
 				INFOPLIST_FILE = "Trimester 1 Project/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.shp.Trimester-1-Project";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -408,10 +435,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = M9E78PZP5E;
 				INFOPLIST_FILE = "Trimester 1 Project/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.shp.Trimester-1-Project";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -423,6 +452,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.shp.Trimester-1-ProjectTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Trimester 1 Project.app/Trimester 1 Project";
 			};
 			name = Debug;
@@ -435,6 +465,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.shp.Trimester-1-ProjectTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Trimester 1 Project.app/Trimester 1 Project";
 			};
 			name = Release;
@@ -446,6 +477,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.shp.Trimester-1-ProjectUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "Trimester 1 Project";
 				USES_XCTRUNNER = YES;
 			};
@@ -458,6 +490,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.shp.Trimester-1-ProjectUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "Trimester 1 Project";
 				USES_XCTRUNNER = YES;
 			};
@@ -482,6 +515,7 @@
 				FA1DA0BF1BFCF6F700C72251 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FA1DA0C01BFCF6F700C72251 /* Build configuration list for PBXNativeTarget "Trimester 1 ProjectTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +524,7 @@
 				FA1DA0C21BFCF6F700C72251 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FA1DA0C31BFCF6F700C72251 /* Build configuration list for PBXNativeTarget "Trimester 1 ProjectUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +533,7 @@
 				FA1DA0C51BFCF6F700C72251 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
