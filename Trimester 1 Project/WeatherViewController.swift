@@ -28,8 +28,8 @@ class WeatherViewController: UIViewController, WKNavigationDelegate {
         
     }
     
-   
-    
+}
+
     
   
     
@@ -52,4 +52,4 @@ class WeatherViewController: UIViewController, WKNavigationDelegate {
     
     
     
-}
+
