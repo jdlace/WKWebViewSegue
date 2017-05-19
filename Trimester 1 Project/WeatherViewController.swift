@@ -16,6 +16,7 @@ class WeatherViewController: UIViewController, WKNavigationDelegate {
     
     override func viewDidLoad() {
         
+        
         let webView = WKWebView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height))
         
         if let customUrl = URL(string: "https://www.weather.com") {
